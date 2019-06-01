@@ -7,10 +7,6 @@ resource "google_container_cluster" "default" {
   remove_default_node_pool = "true"
   initial_node_count       = "1"
 
-  node_config {
-    preemptible = "${var.preemptible}"
-  }
-
   maintenance_policy {
     daily_maintenance_window {
       start_time = "22:00"
